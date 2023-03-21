@@ -33,6 +33,17 @@ function my_assets()
 	));
 }
 
+
+//-----Блок описания вывода меню
+
+add_action( 'after_setup_theme', function(){
+	register_nav_menus( [
+		'menu-1' => 'Меню Товары',
+		'menu-2' => 'Меню Сотрудничество',
+		'menu-3' => 'Меню Доставка',
+	] );
+} ); 
+
 // Заготовка для вызова ajax
 add_action('wp_ajax_aj_fnc', 'aj_fnc');
 add_action('wp_ajax_nopriv_aj_fnc', 'aj_fnc');
